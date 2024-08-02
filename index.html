@@ -7,6 +7,122 @@
     <link rel="stylesheet" href="/style.css" >
 </head>
 <body>
-    
+    <nav id="desktop-nav">
+        <div class="logo">Aswints.com</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <nav id="ham-nav">
+        <div class="logo">Aswints.com</div>
+        <div class="ham-menu">
+            <div class="ham-icon" onclick="togglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="togglemenu()">Home</a></li>
+                <li><a href="#about" onclick="togglemenu()">About</a></li>
+                <li><a href="#portfolio" onclick="togglemenu()">Portfolio</a></li>
+                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section-pic-cont">
+            <img src="./assets/profile.jpg" class="portrait-pic" alt="profilepic" />
+        </div>
+        <div class="section-text">
+            <p class="section-text-p1">Hi, I'm</p>
+            <h1 class="title">Aswin T Sunil</h1>
+            <p class="section-text-p2">FullStack Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/aswin.pdf')">View CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
+            </div>
+            <div id="socials-cont">
+                <img 
+                    src="/assets/linkedin.png" alt="linkedinprofile"
+                    class="icon" onclick="location.href='https://linkedin.com/in/aswin-t-sunil-573740274'"
+                />
+                <img 
+                    src="/assets/github.png" alt="githubprofile"
+                    class="icon" onclick="location.href='https://github.com/shadow-slave'"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section-text-p1">More About Me</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-cont">
+            <div class="section-pic-cont">
+                <img src="./assets/pro2.jpg" alt="profilepic" class="about-pic">
+            </div>
+            <div class="about-details-cont">
+                <div class="about-cont">
+                    <div class="details-cont">
+                        <img  
+                        class="icon" 
+                        src="./assets/experience.png" 
+                        alt="experiencepic"
+                        />
+                        <h3>Experience</h3>
+                        <p>6 month +</p><p>Python FullStack Development</p>
+                    </div>
+                    <div class="details-cont">
+                        <img  
+                        class="icon" 
+                        src="./assets/education.png" 
+                        alt="experiencepic"
+                        />
+                        <h3>Education</h3>
+                        <p>BCA Bachelors Degree</p>
+                    </div>
+                </div>
+                <div class="text-cont">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo quod neque ex obcaecati dolore id totam blanditiis sunt rem sapiente. Magni saepe distinctio, et consectetur facilis cumque, neque architecto ipsa odio, sapiente minima id voluptas aperiam. Fugit qui perspiciatis ad, animi magnam assumenda nobis. Commodi totam similique error possimus voluptate.</p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/" alt="">
+    </section>
+    <section id="portfolio">
+        <h2>My Portfolio</h2>
+        <p>Here are some of my recent projects:</p>
+        <div class="project">
+            <img src="https://via.placeholder.com/300x200" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/300x200" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+    </section>
+    <script src="/script.js"></script>
 </body>
 </html>
