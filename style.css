@@ -60,7 +60,7 @@ a:hover{
 }
 
 .logo {
-    font-size: 1.7 rem;
+    font-size: 2 rem;
 }
 
 .logo:hover{
@@ -258,6 +258,115 @@ section {
 .btn-contanier {
     gap: 1rem;
 }
+
+/* About */
+
+#about {
+    position: relative;
+}
+
+.about-cont {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.about-details-cont {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-cont,
+.about-details-cont{
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-cont {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163,163,163);
+    text-align: center;
+}
+
+.section-cont {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section-pic-cont{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* experience */
+/* experience */
+#experience {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.experience-details-cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    text-align: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+article .icon {
+    height: 3rem;
+    width: 3rem;
+}
+
+article h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0 0;
+}
+
+/* Hover effect */
+.article-cont article:hover .icon {
+    transform: scale(1.2); 
+}
+
+
+
+
 
 
 @media screen and (max-width: 1200px) {
