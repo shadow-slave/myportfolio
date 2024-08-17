@@ -60,7 +60,7 @@ a:hover{
 }
 
 .logo {
-    font-size: 2 rem;
+    font-size: 2rem;
 }
 
 .logo:hover{
@@ -161,14 +161,15 @@ section {
 
 /* profile */
 #profile {
+    display: flex;
     justify-content: center;
     gap: 5rem;
     height: 80vh;
 }
 .portrait-pic {
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
+    border-radius: 2rem;
+    /* margin-left: 2.5rem; */
+
 }
 .section-pic-cont {
     display: flex;
@@ -214,7 +215,7 @@ section {
 
 /* buttons */
 
-.btn-contanier {
+.btn-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -255,7 +256,7 @@ section {
     border: rgb(255,255,255) 0.1rem solid ;
 }
 
-.btn-contanier {
+.btn-container {
     gap: 1rem;
 }
 
@@ -385,8 +386,12 @@ article h3 {
     margin: 1rem;
     color: #000;
 }
-.project-btn {
-    color: #000;
+.project-btn-1{
+    color: #ffffff;
+    background-color: rgb(35, 35, 35);
+}
+.project-btn-2{
+    color: #050505;
     border-color: rgb(163,163,163);
 }
 
@@ -405,7 +410,7 @@ article h3 {
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163,163,163);
-    background: (250,250,250);
+    background: rgb(250,250,250);
     margin: 2rem auto;
     padding: 0.5rem;
 }
@@ -430,7 +435,32 @@ article h3 {
     height: 2.5rem;
 }
 
+
+/* FOOTER */
+footer {
+    height: 26vh;
+    margin: 0.1rem;
+}
+footer p {
+    text-align: center;
+}
+
+
+
+
 /* media */
+
+@media screen and (max-width: 1400px) {
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-cont{
+        flex-wrap: wrap;
+    }
+
+}
+
 @media screen and (max-width: 1200px) {
     #desktop-nav{
         display: none;
@@ -438,6 +468,94 @@ article h3 {
     #ham-nav{
         display: flex;
     }
+    #experience, .experience-details-cont {
+        margin-top: 2rem;
+    }
+    #profile, .section-cont {
+        display: block;
+    }
+    .portrait-pic {
+        border-radius: 2rem;
 
+    }
+    .arrow {
+        display: none;
+    }
+    section, .section-cont {
+        height: fit-content;
+    }
+    section {
+        margin: 0 5%;
+    }
+    .section-pic-cont {
+        width: auto;
+        height: 275px;
+        justify-content: center;
+        margin: 0 auto 2rem ;
+    }
+    .about-cont {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    #contact, footer {
+        height: 40vh;
+    }
+    #profile {
+        height: 83vh;
+        margin-bottom: 0;
+    }
+    .portrait-pic {
+        border-radius: 2rem;
+
+    }
+
+    article {
+        font-size: 1rem;
+    }
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
+    .about-cont, .contact-info-upper-cont, .btn-container{
+        flex-wrap: wrap;
+    }
+    .contact-info-cont{
+        margin: 0;
+    }
+    .contact-info-cont p, .nav-links li a {
+        font-size: 1rem;
+    }
+    .experience-sub-title {
+        font-size: 1.25rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-links{
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .section-pic-cont {
+        width: auto;
+        height: 55vw;
+        justify-content: center;
+    }
+    .section-text-p2 {
+        font-size: 1.25rem;
+    }
+    .title{
+        font-size: 2rem;
+        color: #000;
+    }
+    .text-cont {
+        text-align: justify;
+        padding: 1rem;
+    }
+    /* .section-text {
+        padding: 1rem;
+    } */
+}

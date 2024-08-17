@@ -8,16 +8,16 @@
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Aswints.com</div>
+        <div class="logo">Aswints.in</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <nav id="ham-nav">
-        <div class="logo">Aswints.com</div>
+        <div class="logo">Aswints.in</div>
         <div class="ham-menu">
             <div class="ham-icon" onclick="togglemenu()">
                 <span></span>
@@ -25,9 +25,9 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#home" onclick="togglemenu()">Home</a></li>
+                <li><a href="#profile" onclick="togglemenu()">Home</a></li>
                 <li><a href="#about" onclick="togglemenu()">About</a></li>
-                <li><a href="#portfolio" onclick="togglemenu()">Portfolio</a></li>
+                <li><a href="#experience" onclick="togglemenu()">Portfolio</a></li>
                 <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
             </div>
         </div>
@@ -35,7 +35,7 @@
 
     <section id="profile">
         <div class="section-pic-cont">
-            <img src="./assets/profile.jpg" class="portrait-pic" alt="profilepic" />
+            <img src="./assets/portfoliobg.png" class="portrait-pic" alt="profilepic" />
         </div>
         <div class="section-text">
             <p class="section-text-p1">Hi, I'm</p>
@@ -49,10 +49,12 @@
                 <img 
                     src="/assets/linkedin.png" alt="linkedinprofile"
                     class="icon" onclick="location.href='https://linkedin.com/in/aswin-t-sunil-573740274'"
+                    target="_blank"
                 />
                 <img 
                     src="/assets/github.png" alt="githubprofile"
                     class="icon" onclick="location.href='https://github.com/shadow-slave'"
+                    target="_blank"
                 />
             </div>
         </div>
@@ -63,7 +65,7 @@
         <h1 class="title">About Me</h1>
         <div class="section-cont">
             <div class="section-pic-cont">
-                <img src="./assets/pro2.jpg" alt="profilepic" class="about-pic">
+                <img src="./assets/aboutbg.png" alt="profilepic" class="about-pic">
             </div>
             <div class="about-details-cont">
                 <div class="about-cont">
@@ -87,7 +89,11 @@
                     </div>
                 </div>
                 <div class="text-cont">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo quod neque ex obcaecati dolore id totam blanditiis sunt rem sapiente. Magni saepe distinctio, et consectetur facilis cumque, neque architecto ipsa odio, sapiente minima id voluptas aperiam. Fugit qui perspiciatis ad, animi magnam assumenda nobis. Commodi totam similique error possimus voluptate.</p>
+                    <p>I'm Full Stack Developer, With a strong foundation in programming
+                        and a Bachelor's Degree in Computer Applications,I have a deep interest in creating seamless user experiences 
+                        and robust backend systems. Whether it's building responsive front-end designs or architecting efficient backend solutions,
+                        I am committed to delivering high-quality work that meets the needs of users and businesses alike.
+                    </p>
                 </div>
             </div>
         </div>
@@ -138,7 +144,7 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'">
     </section>
     <section id="projects">
         <p class="section-text-p1">Browse My Recent</p>
@@ -149,28 +155,42 @@
                 <div class="article-cont">
                     <img src="./assets/eturf.png" alt="project-1" class="project-img">
                 </div>
-                <h2 class="experience-sub-title project-title">Eturf Project</h2>
+                <h2 class="experience-sub-title project-title">Eturf</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/">
+                    <a href="https://github.com/shadow-slave/Eturf" target="_blank"><button class="btn btn-color-2 project-btn-1" >
                         Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/">
+                    </button></a>
+                    <a href="https://aswin001.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
                         Live
-                    </button>
+                    </button></a>
                 </div>
             </div>
             <div class="details-cont color-cont">
                 <div class="article-cont">
                     <img src="./assets/pd.png" alt="project-2" class="project-img">
                 </div>
-                <h2 class="experience-sub-title project-title">Landing Page Project</h2>
+                <h2 class="experience-sub-title project-title">Phoenix Designs</h2>
                 <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/">
+                    <a href="https://phoenixdesigns.pythonanywhere.com/"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
                         Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/">
+                    </button></a>
+                    <a href="https://phoenixdesigns.pythonanywhere.com/"><button class="btn btn-color-2 project-btn" >
                         Live
-                    </button>
+                    </button></a>
+                </div>
+            </div>
+            <div class="details-cont color-cont">
+                <div class="article-cont">
+                    <img src="./assets/pd.png" alt="project-2" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">Task Manager</h2>
+                <div class="btn-container">
+                    <a href="https://github.com/shadow-slave/todolist.git"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
+                        Github
+                    </button></a>
+                    <a href="https://todolist-k99z.onrender.com/"><button class="btn btn-color-2 project-btn" >
+                        Live
+                    </button></a>
                 </div>
             </div>
             </div>
@@ -184,12 +204,26 @@
             <div class="contact-info-cont">
                 <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon ">
                 <p><a href="mailto:ashwinsunil02@gmail.com">ashwinsunil02@gmail.com</a></p>
-                <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon">
-                <p><a href="https://linkedin.com/in/aswin-t-sunil-573740274">Linkedin</a></p>
+            </div>
+            <div class="contact-info-cont">
+                <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon" target="_blank">
+                <p><a href="https://linkedin.com/in/aswin-t-sunil-573740274" target="_blank">Linkedin</a></p>
             </div>
         </div>
     </section>
-    
+    <footer>
+        <nav>
+            <div class="nav-links-cont">
+                <ul class="nav-links">
+                    <li><a href="#profile">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Aswints. All Rights Reserved.</p>
+    </footer>
     <script src="/script.js"></script>
 </body>
 </html>
