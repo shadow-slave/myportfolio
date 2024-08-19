@@ -53,19 +53,21 @@
         <div class="section-text">
             <p class="section-text-p1">Hi, I'm</p>
             <h1 class="title">Aswin T Sunil</h1>
-            <p class="section-text-p2">FullStack Developer</p>
+            <div class="typewriter-text">
+                <p class="section-text-p2">A <span></span></p>
+            </div>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/aswin.pdf')">View CV</button>
                 <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
             </div>
             <div id="socials-cont">
                 <img 
-                    src="/assets/linkedin.png" alt="linkedinprofile"
+                    src="/assets/linkedin.png" id="linkedin_p" alt="linkedinprofile"
                     class="icon" onclick="location.href='https://linkedin.com/in/aswin-t-sunil-573740274'"
                     target="_blank"
                 />
                 <img 
-                    src="/assets/github.png" alt="githubprofile"
+                    src="/assets/github.png" id="github_p" alt="githubprofile"
                     class="icon" onclick="location.href='https://github.com/shadow-slave'"
                     target="_blank"
                 />
@@ -83,7 +85,8 @@
             <div class="about-details-cont">
                 <div class="about-cont">
                     <div class="details-cont">
-                        <img  
+                        <img
+                        id="experience"  
                         class="icon" 
                         src="./assets/experience.png" 
                         alt="experiencepic"
@@ -93,6 +96,7 @@
                     </div>
                     <div class="details-cont">
                         <img  
+                        id="education"
                         class="icon" 
                         src="./assets/education.png" 
                         alt="experiencepic"
@@ -121,19 +125,19 @@
                     <h2 class="experience-sub-title">Frontend Development</h2>
                     <div class="article-cont">
                         <article>
-                            <img src="./assets/html.png" alt="HTML icon" class="icon">
+                            <img id="html" src="./assets/html.png" alt="HTML icon" class="icon">
                             <h3>HTML</h3>
                         </article>
                         <article>
-                            <img src="./assets/css-3.png" alt="CSS icon" class="icon">
+                            <img id="css" src="./assets/css-3.png" alt="CSS icon" class="icon">
                             <h3>CSS</h3>
                         </article>
                         <article>
-                            <img src="./assets/java-script.png" alt="JavaScript icon" class="icon">
+                            <img id="js" src="./assets/java-script.png" alt="JavaScript icon" class="icon">
                             <h3>JavaScript</h3>
                         </article>
                         <article>
-                            <img src="./assets/typescript.png" alt="TypeScript icon" class="icon">
+                            <img id="ts" src="./assets/typescript.png" alt="TypeScript icon" class="icon">
                             <h3>TypeScript</h3>
                         </article>
                     </div>
@@ -142,15 +146,15 @@
                     <h2 class="experience-sub-title">Backend Development</h2>
                     <div class="article-cont">
                         <article>
-                            <img src="./assets/django.png" alt="Django icon" class="icon">
+                            <img id="django" src="./assets/django.png" alt="Django icon" class="icon">
                             <h3>Django</h3>
                         </article>
                         <article>
-                            <img src="./assets/python.png" alt="Python icon" class="icon">
+                            <img id="python" src="./assets/python.png" alt="Python icon" class="icon">
                             <h3>Python</h3>
                         </article>
                         <article>
-                            <img src="./assets/mysql.png" alt="MySQL icon" class="icon">
+                            <img id="mysql" src="./assets/mysql.png" alt="MySQL icon" class="icon">
                             <h3>MySQL</h3>
                         </article>
                     </div>
@@ -180,28 +184,28 @@
             </div>
             <div class="details-cont color-cont">
                 <div class="article-cont">
-                    <img src="./assets/pd.png" alt="project-2" class="project-img">
+                    <img src="./assets/pdmockmac.png" alt="project-2" class="project-img">
                 </div>
                 <h2 class="experience-sub-title project-title">Phoenix Designs</h2>
                 <div class="btn-container">
-                    <a href="https://phoenixdesigns.pythonanywhere.com/"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
+                    <a href="https://phoenixdesigns.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
                         Github
                     </button></a>
-                    <a href="https://phoenixdesigns.pythonanywhere.com/"><button class="btn btn-color-2 project-btn" >
+                    <a href="https://phoenixdesigns.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
                         Live
                     </button></a>
                 </div>
             </div>
             <div class="details-cont color-cont">
                 <div class="article-cont">
-                    <img src="./assets/pd.png" alt="project-2" class="project-img">
+                    <img src="./assets/taskmanager.png" alt="project-3" class="project-img" >
                 </div>
                 <h2 class="experience-sub-title project-title">Task Manager</h2>
                 <div class="btn-container">
-                    <a href="https://github.com/shadow-slave/todolist.git"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
+                    <a href="https://github.com/shadow-slave/todolist.git" target="_blank"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
                         Github
                     </button></a>
-                    <a href="https://todolist-k99z.onrender.com/"><button class="btn btn-color-2 project-btn" >
+                    <a href="https://todolist-k99z.onrender.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
                         Live
                     </button></a>
                 </div>

@@ -1,3 +1,9 @@
+const texts = [
+    "FullStack Developer",
+    "Web Designer",
+    "Web Developer"
+]
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
