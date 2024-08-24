@@ -1,9 +1,3 @@
-const texts = [
-    "FullStack Developer",
-    "Web Designer",
-    "Web Developer"
-]
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -19,3 +13,5 @@ function togglemenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+
+
