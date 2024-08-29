@@ -90,19 +90,21 @@ html{
 
 /* Preloader styles */
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: #f3f4f6; /* Light background for the preloader */
+    background-color: var(--body-main-color); /* Light background for the preloader */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Ensure preloader is above all content */
 }
-.loader {
-    color: rgb(84, 87, 82);
+  .loader {
+    color: var(--primary-color);
     width: fit-content;
     font-weight: bold;
     font-family: monospace;
@@ -113,11 +115,12 @@ html{
     overflow: hidden;
   }
   .loader:before {
-    content: "Loading...\A Cargando...\A Chargement...\A Laden...\A Caricamento...\A 素早く...\A Préchargement...\A"; 
+    content: "Loading...\A Cargando...\A Chargement...\A Laden...\A Caricamento...\A 素早く...\A Préchargement...\A Loading"; 
     white-space: pre;
     display: inline-block;
-    animation: l39 1s infinite steps(7) alternate;
+    animation: l39 3s infinite steps(8) alternate;
   }
+  
   @keyframes l39 {
     100% { transform: translateY(-100%); }
   }
