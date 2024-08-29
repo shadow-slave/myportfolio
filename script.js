@@ -14,4 +14,21 @@ function togglemenu() {
     icon.classList.toggle("open");
 }
 
+window.onscroll = function() {toggleSidebar()};
+
+function toggleSidebar() {
+    var desktopNav = document.getElementById("desktop-nav");
+    var sidebar = document.getElementById("sidebar");
+    if (window.innerWidth >= 1200 ){
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            desktopNav.classList.add("hidden");
+            sidebar.classList.remove("hidden");
+            sidebar.classList.add("open");
+        } else {
+            desktopNav.classList.remove("hidden");
+            sidebar.classList.remove("open");
+        }
+    }
+}
+
 

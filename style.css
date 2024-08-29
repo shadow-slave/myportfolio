@@ -35,7 +35,7 @@
 
 
 .darkmode {
-    --body-main-color: rgb(41, 42, 40);
+    --body-main-color: rgb(20, 20, 20);
     --primary-color: #f5f5f5; /* Inverted to a light color */
     --secondary-color: rgb(200, 200, 200); /* Light gray for secondary elements */
     --link-color: #ffffff; /* White for links */
@@ -50,18 +50,18 @@
     --button-hover-color: #333333; /* Dark hover color */
     --button-hover-background: #ffffff; /* White background for buttons */
     --details-bg-color: rgb(200, 200, 200); /* Light gray for details background */
-    --details-border-color:#2e2e2e; /* Darker gray for borders */
+    --details-border-color:rgba(255,255,255,0.1); /* Darker gray for borders */
     --experience-subtitle-color: rgb(225, 225, 225); /* Light gray for subtitles */
-    --experience-details-border-color: rgb(70, 69, 69); /* Darker gray for borders */
-    --experience-details-bg-color:#333333; /* Dark background for experience details */
+    --experience-details-border-color: rgba(255,255,255,0.1); /* Darker gray for borders */
+    --experience-details-bg-color:rgba(255,255,255,0.02); /* Dark background for experience details */
     --project-title-color: #ffffff; /* White for project titles */
     --project-btn1-text-color: #000000; /* Black text for button 1 */
     --project-btn1-bg-color: rgb(200, 200, 200); /* Light gray background for button 1 */
     --project-btn2-text-color: #ffffff; /* White text for button 2 */
     --project-btn2-border-color: rgb(100, 100, 100); /* Darker gray for button 2 border */
-    --contact-info-border: rgb(200, 200, 200); /* Light gray for contact info border */
-    --contact-info-border-color: rgb(100, 100, 100); /* Darker gray for border color */
-    --contact-info-bg-color: rgb(50, 50, 50); /* Dark background for contact info */
+    --contact-info-border: rgba(255,255,255,0.1); /* Light gray for contact info border */
+    --contact-info-border-color: rgba(255,255,255,0.1); /* Darker gray for border color */
+    --contact-info-bg-color: rgba(255,255,255,0.02); /* Dark background for contact info */
     --title-smallview-color: #ffffff; /* White for titles in small view */    
     
 }
@@ -73,6 +73,8 @@
     margin: 0;
     padding: 0;
 }
+
+
 
 body {
     font-family: "Poppins", sans-serif;
@@ -207,9 +209,6 @@ input:checked + label svg.sun{
 input:checked + label svg.moon{
     fill: #fff;
 }
-
-
-
 
 /* hamburger menu */
 #ham-nav{
@@ -667,25 +666,130 @@ footer p {
     text-align: center;
 }
 
+/* SIDEBAR */
+.hidden {
+    display: none;
+}
 
 
 
 /* media */
+@media screen and (min-width:1200px) {
+        
+    /* SIDEBAR */
+    .hidden {
+        display: none;
+    }
+    /* Sidebar Styles */
+    #sidebar {
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 150px; /* Adjust width  */
+        background-color: var(--body-main-color);
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+        padding-top: 8rem;
+        overflow-y: hidden; 
+        display: flex;
+        /* align-items: center; */
+    }
+
+    /* When Sidebar is Open */
+    #sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Logo */
+    .sidebar-logo {
+        font-family: 'Dancing Script', cursive;
+        margin-bottom: .7rem; /* Space below logo */
+        margin-left: -4.8rem; /* Space from left */
+        color: var(--logo-color); 
+        font-size: 1.5rem; 
+        cursor:default;
+    }
+
+    /* Navigation Items Container */
+    #sidebar-nav {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center items vertically */
+        width: 100%;
+    }
+
+
+    /* Navigation Items */
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        width: 100%; /* takes full width */
+        margin-left: 1rem;
+    }
+    #sidebar ul li i {
+        font-size: 1.5rem;
+    }
+    #sidebar ul li{
+        position: relative;
+        line-height: 3rem;
+        list-style: none;
+
+    }
+    /* Navigation Links */
+    #sidebar a {
+        display: block;
+        position: relative;
+        padding: .8rem 0 0 .8rem; /* Add horizontal padding for a better touch target */
+        text-align: left;
+        color: var(--menu-links-color);
+        text-decoration: none;
+        transition:  0.3s ease, color 0.3s ease; /* Smooth color transitions */
+        border-radius: 0.5rem; /* Rounded corners for links */
+        width: 100%; /* Ensure links take full width */
+    }
+
+    /* Hover Effect */
+    #sidebar a:hover {
+        color: var(--link-hover-color); /* Optionally change text color on hover */
+    }
+    /* tooltip */
+
+    #sidebar ul li .tooltip {
+        position: absolute;
+        width: max-content;
+        left: 5rem;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0.5rem 0.8rem rgba(0,0,0,0.2);
+        border-radius: 0.6rem;
+        padding: .01rem 1rem;
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+    }
+    #sidebar ul li i:hover + .tooltip{
+        opacity: 1;
+        cursor: default;
+    }
+}
 
 @media screen and (max-width: 1400px) {
     #profile {
         height: 83vh;
-        margin-bottom: 6rem;
+        margin-bottom: 0rem;
     }
-    /* .about-cont{
-        flex-wrap: wrap;
-    } */
+
     section, .section-cont {
         height: fit-content;
+        margin-bottom: 6rem;
     }
-    section {
-        margin: 0 5%;
-    }
+    /* section {
+        margin-bottom: 0 5%;
+    } */
     .about-cont {
         flex-wrap: wrap;
         margin-top: 0;
@@ -693,7 +797,14 @@ footer p {
 
 }
 
+@media screen and (max-height:700px) {
+    #profile {
+        margin-bottom: 30rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
+
     #desktop-nav{
         display: none;
     }
@@ -732,6 +843,12 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
+        
+    /* SIDEBAR */
+    .hidden {
+        display: none;
+    }
+
     #contact, footer {
         height: 40vh;
     }

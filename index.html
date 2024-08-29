@@ -5,242 +5,279 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aswin TS</title>
     <link rel="stylesheet" href="/style.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Great+Vibes&family=Allura&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script type="text/javascript"  src="darkmode.js" defer></script>
 </head>
 <body >
-    <nav id="desktop-nav">
-        <div class="logo">Aswints.in</div>
-        <ul class="nav-links">
-            <li><a href="#profile">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="nav-links">
-                <input type="checkbox" id="darkmode-toggle"/>
-                <label for="darkmode-toggle">
-                    <svg class="moon" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 21.8a9.796 9.796 0 0 1-1.245-19.513l1.286-.163-.843.984a8.285 8.285 0 0 0 8.519 13.383l1.252-.347-.696 1.096A9.755 9.755 0 0 1 12 21.8zM9.647 3.526a8.796 8.796 0 1 0 9.031 14.196 9.048 9.048 0 0 1-1.178.078A9.293 9.293 0 0 1 9.647 3.526z"/>
-                        <path fill="none" d="M0 0h24v24H0z"/>
-                    </svg>
-                    <svg class="sun" fill="#000000" width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 9.25c-3.728 0-6.75 3.022-6.75 6.75s3.022 6.75 6.75 6.75c3.728 0 6.75-3.022 6.75-6.75v0c-0.005-3.726-3.024-6.745-6.75-6.75h-0zM16 21.25c-2.899 0-5.25-2.351-5.25-5.25s2.351-5.25 5.25-5.25c2.899 0 5.25 2.351 5.25 5.25v0c-0.004 2.898-2.352 5.246-5.25 5.25h-0zM22.848 9.897c0 0 0 0 0.001 0 0.207 0 0.395-0.084 0.531-0.22l5.168-5.168c0.136-0.136 0.219-0.323 0.219-0.53 0-0.415-0.336-0.751-0.751-0.751-0.208 0-0.395 0.084-0.531 0.22v0l-5.168 5.168c-0.136 0.136-0.22 0.323-0.22 0.53 0 0.414 0.336 0.75 0.75 0.75 0 0 0.001 0 0.001 0h-0zM23.379 22.322c-0.136-0.136-0.324-0.22-0.531-0.22-0.415 0-0.751 0.336-0.751 0.751 0 0.207 0.084 0.395 0.22 0.531l5.152 5.152c0.136 0.136 0.324 0.22 0.531 0.22 0.415 0 0.751-0.336 0.751-0.751 0-0.207-0.084-0.395-0.22-0.531v0zM8.621 9.678c0.135 0.131 0.319 0.212 0.523 0.212 0.414 0 0.75-0.336 0.75-0.75 0-0.203-0.081-0.388-0.212-0.523l0 0-5.151-5.152c-0.136-0.14-0.327-0.227-0.538-0.227-0.414 0-0.75 0.336-0.75 0.75 0 0.211 0.087 0.401 0.227 0.537l0 0zM16 24.934c-0.414 0-0.75 0.336-0.75 0.75v0 4.307c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-4.307c-0-0.414-0.336-0.75-0.75-0.75v0zM16 7.058c0.414-0 0.75-0.336 0.75-0.75v0-4.308c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 4.308c0 0.414 0.336 0.75 0.75 0.75v0zM29.996 15.25h-4.309c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h4.309c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM7.063 16c-0-0.414-0.336-0.75-0.75-0.75h-4.308c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h4.308c0.414-0 0.75-0.336 0.75-0.75v0zM8.621 22.322l-5.151 5.154c-0.131 0.135-0.212 0.319-0.212 0.523 0 0.414 0.336 0.75 0.75 0.75 0.203 0 0.388-0.081 0.523-0.212l-0 0 5.151-5.154c0.14-0.136 0.227-0.327 0.227-0.538 0-0.414-0.336-0.75-0.75-0.75-0.211 0-0.401 0.087-0.538 0.227l-0 0zM20.4 24.664c-0.116-0.273-0.382-0.46-0.692-0.46-0.414 0-0.75 0.336-0.75 0.75 0 0.102 0.021 0.2 0.058 0.289l-0.002-0.005 0.436 1.049c0.116 0.274 0.383 0.462 0.693 0.463h0c0 0 0.001 0 0.001 0 0.414 0 0.749-0.336 0.749-0.749 0-0.104-0.021-0.203-0.059-0.293l0.002 0.005zM11.601 7.337c0.116 0.273 0.382 0.461 0.692 0.461 0.414 0 0.75-0.336 0.75-0.75 0-0.103-0.021-0.201-0.058-0.29l0.002 0.005-0.436-1.050c-0.116-0.274-0.382-0.462-0.692-0.462-0.414 0-0.75 0.336-0.75 0.75 0 0.104 0.021 0.202 0.059 0.292l-0.002-0.005zM25.24 12.99l1.047-0.434c0.274-0.116 0.463-0.382 0.463-0.693 0-0.414-0.336-0.75-0.75-0.75-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002-1.047 0.434c-0.274 0.116-0.463 0.382-0.463 0.693 0 0.414 0.336 0.75 0.75 0.75 0 0 0 0 0 0h-0c0.104-0 0.202-0.021 0.292-0.059l-0.005 0.002zM6.765 19.018l-1.052 0.436c-0.272 0.117-0.46 0.382-0.46 0.692 0 0.414 0.336 0.75 0.75 0.75 0.102 0 0.2-0.020 0.288-0.057l-0.005 0.002 1.052-0.436c0.276-0.115 0.466-0.383 0.466-0.695 0-0.414-0.336-0.75-0.75-0.75-0.105 0-0.204 0.021-0.295 0.060l0.005-0.002zM24.664 20.4l1.049 0.436c0.084 0.036 0.182 0.057 0.285 0.057 0.001 0 0.002 0 0.002 0h-0c0 0 0 0 0 0 0.414 0 0.75-0.336 0.75-0.75 0-0.311-0.189-0.578-0.459-0.691l-0.005-0.002-1.049-0.436c-0.084-0.035-0.182-0.056-0.284-0.056-0.414 0-0.75 0.336-0.75 0.75 0 0.31 0.188 0.576 0.456 0.69l0.005 0.002zM7.337 11.601l-1.050-0.436c-0.085-0.036-0.184-0.057-0.287-0.057-0.414 0-0.75 0.336-0.75 0.75 0 0.31 0.189 0.577 0.458 0.691l0.005 0.002 1.050 0.436c0.084 0.036 0.182 0.056 0.285 0.056 0.414 0 0.75-0.336 0.75-0.75 0-0.31-0.188-0.575-0.456-0.69l-0.005-0.002zM19.424 7.745c0.085 0.036 0.184 0.056 0.287 0.057h0c0 0 0.001 0 0.001 0 0.31 0 0.577-0.189 0.69-0.458l0.002-0.005 0.436-1.052c0.036-0.085 0.057-0.184 0.057-0.287 0-0.414-0.336-0.75-0.75-0.75-0.311 0-0.578 0.189-0.692 0.458l-0.002 0.005-0.436 1.052c-0.036 0.085-0.057 0.183-0.057 0.287 0 0.311 0.189 0.578 0.458 0.692l0.005 0.002zM12.584 24.26c-0.085-0.036-0.184-0.057-0.287-0.057-0.311 0-0.578 0.189-0.692 0.458l-0.002 0.005-0.434 1.047c-0.036 0.085-0.057 0.184-0.057 0.287 0 0.414 0.336 0.75 0.75 0.75 0.311 0 0.578-0.189 0.691-0.458l0.002-0.005 0.434-1.047c0.036-0.085 0.057-0.183 0.057-0.287 0-0.311-0.189-0.578-0.458-0.692l-0.005-0.002z"></path>
-                        </svg>                      
-                </label>
-            </li>
-        </ul>
-    </nav>
-    <nav id="ham-nav">
-        <div class="logo">Aswints.in</div>
-        <div class="ham-menu">
-            <div class="ham-icon" onclick="togglemenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#profile" onclick="togglemenu()">Home</a></li>
-                <li><a href="#about" onclick="togglemenu()">About</a></li>
-                <li><a href="#experience" onclick="togglemenu()">Portfolio</a></li>
-                <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-
-    <section id="profile">
-        <div class="section-pic-cont">
-            <img src="./assets/portfoliobg.png" class="portrait-pic" alt="profilepic" />
-        </div>
-        <div class="section-text">
-            <p class="section-text-p1">Hi, I'm</p>
-            <h1 class="title">Aswin T Sunil</h1>
-            <div class="typewriter-text">
-                <p class="section-text-p2">A <span></span></p>
-            </div>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/aswin.pdf')">View CV</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
-            </div>
-            <div id="socials-cont">
-                <img 
-                    src="/assets/linkedin.png" id="linkedin_p" alt="linkedinprofile"
-                    class="icon" onclick="location.href='https://linkedin.com/in/aswin-t-sunil-573740274'"
-                    target="_blank"
-                />
-                <img 
-                    src="/assets/github.png" id="github_p" alt="githubprofile"
-                    class="icon" onclick="location.href='https://github.com/shadow-slave'"
-                    target="_blank"
-                />
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <p class="section-text-p1">More About Me</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-cont">
-            <div class="section-pic-cont">
-                <img src="./assets/aboutbg.png" alt="profilepic" class="about-pic">
-            </div>
-            <div class="about-details-cont">
-                <div class="about-cont">
-                    <div class="details-cont">
-                        <img
-                        id="experience"  
-                        class="icon" 
-                        src="./assets/experience.png" 
-                        alt="experiencepic"
-                        />
-                        <h3>Experience</h3>
-                        <p>6 month +</p><p>Python FullStack Development</p>
-                    </div>
-                    <div class="details-cont">
-                        <img  
-                        id="education"
-                        class="icon" 
-                        src="./assets/education.png" 
-                        alt="experiencepic"
-                        />
-                        <h3>Education</h3>
-                        <p>BCA Bachelors Degree</p>
-                    </div>
-                </div>
-                <div class="text-cont">
-                    <p>I'm Full Stack Developer, With a strong foundation in programming
-                        and a Bachelor's Degree in Computer Applications,I have a deep interest in creating seamless user experiences 
-                        and robust backend systems. Whether it's building responsive front-end designs or architecting efficient backend solutions,
-                        I am committed to delivering high-quality work that meets the needs of users and businesses alike.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="arrowicon" class="icon arrow" onclick="location.href='./#experience'">
-    </section>
-    <section id="experience">
-        <p class="section-text-p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-cont">
-            <div class="about-cont">
-                <div class="details-cont">
-                    <h2 class="experience-sub-title">Frontend Development</h2>
-                    <div class="article-cont">
-                        <article>
-                            <img id="html" src="./assets/html.png" alt="HTML icon" class="icon">
-                            <h3>HTML</h3>
-                        </article>
-                        <article>
-                            <img id="css" src="./assets/css-3.png" alt="CSS icon" class="icon">
-                            <h3>CSS</h3>
-                        </article>
-                        <article>
-                            <img id="js" src="./assets/java-script.png" alt="JavaScript icon" class="icon">
-                            <h3>JavaScript</h3>
-                        </article>
-                        <article>
-                            <img id="ts" src="./assets/typescript.png" alt="TypeScript icon" class="icon">
-                            <h3>TypeScript</h3>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-cont">
-                    <h2 class="experience-sub-title">Backend Development</h2>
-                    <div class="article-cont">
-                        <article>
-                            <img id="django" src="./assets/django.png" alt="Django icon" class="icon">
-                            <h3>Django</h3>
-                        </article>
-                        <article>
-                            <img id="python" src="./assets/python.png" alt="Python icon" class="icon">
-                            <h3>Python</h3>
-                        </article>
-                        <article>
-                            <img id="mysql" src="./assets/mysql.png" alt="MySQL icon" class="icon">
-                            <h3>MySQL</h3>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'">
-    </section>
-    <section id="projects">
-        <p class="section-text-p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-cont">
-            <div class="about-cont">
-            <div class="details-cont color-cont">
-                <div class="article-cont">
-                    <img src="./assets/eturf.png" alt="project-1" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title">Eturf</h2>
-                <div class="btn-container">
-                    <a href="https://github.com/shadow-slave/Eturf" target="_blank"><button class="btn btn-color-2 project-btn-1" >
-                        Github
-                    </button></a>
-                    <a href="https://aswin001.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
-                        Live
-                    </button></a>
-                </div>
-            </div>
-            <div class="details-cont color-cont">
-                <div class="article-cont">
-                    <img src="./assets/pdmockmac.png" alt="project-2" class="project-img">
-                </div>
-                <h2 class="experience-sub-title project-title">Phoenix Designs</h2>
-                <div class="btn-container">
-                    <a href="https://phoenixdesigns.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
-                        Github
-                    </button></a>
-                    <a href="https://phoenixdesigns.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
-                        Live
-                    </button></a>
-                </div>
-            </div>
-            <div class="details-cont color-cont">
-                <div class="article-cont">
-                    <img src="./assets/taskmanager.png" alt="project-3" class="project-img" >
-                </div>
-                <h2 class="experience-sub-title project-title">Task Manager</h2>
-                <div class="btn-container">
-                    <a href="https://github.com/shadow-slave/todolist.git" target="_blank"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
-                        Github
-                    </button></a>
-                    <a href="https://todolist-k99z.onrender.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
-                        Live
-                    </button></a>
-                </div>
-            </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#contact'">
-    </section>
-    <section id="contact">
-        <p class="section-text-p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-cont">
-            <div class="contact-info-cont">
-                <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon ">
-                <p><a href="mailto:ashwinsunil02@gmail.com">ashwinsunil02@gmail.com</a></p>
-            </div>
-            <div class="contact-info-cont">
-                <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon" target="_blank">
-                <p><a href="https://linkedin.com/in/aswin-t-sunil-573740274" target="_blank">Linkedin</a></p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-cont">
-                <ul class="nav-links">
-                    <li><a href="#profile">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+    <div class="preloader"></div>
+    <div class="main-content">
+        <nav id="desktop-nav">
+            <div class="logo">Aswints.in</div>
+            <ul class="nav-links">
+                <li><a href="#profile">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-links">
+                    <input type="checkbox" id="darkmode-toggle"/>
+                    <label for="darkmode-toggle">
+                        <svg class="moon" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.8a9.796 9.796 0 0 1-1.245-19.513l1.286-.163-.843.984a8.285 8.285 0 0 0 8.519 13.383l1.252-.347-.696 1.096A9.755 9.755 0 0 1 12 21.8zM9.647 3.526a8.796 8.796 0 1 0 9.031 14.196 9.048 9.048 0 0 1-1.178.078A9.293 9.293 0 0 1 9.647 3.526z"/>
+                            <path fill="none" d="M0 0h24v24H0z"/>
+                        </svg>
+                        <svg class="sun" fill="#000000" width="24px" height="24px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 9.25c-3.728 0-6.75 3.022-6.75 6.75s3.022 6.75 6.75 6.75c3.728 0 6.75-3.022 6.75-6.75v0c-0.005-3.726-3.024-6.745-6.75-6.75h-0zM16 21.25c-2.899 0-5.25-2.351-5.25-5.25s2.351-5.25 5.25-5.25c2.899 0 5.25 2.351 5.25 5.25v0c-0.004 2.898-2.352 5.246-5.25 5.25h-0zM22.848 9.897c0 0 0 0 0.001 0 0.207 0 0.395-0.084 0.531-0.22l5.168-5.168c0.136-0.136 0.219-0.323 0.219-0.53 0-0.415-0.336-0.751-0.751-0.751-0.208 0-0.395 0.084-0.531 0.22v0l-5.168 5.168c-0.136 0.136-0.22 0.323-0.22 0.53 0 0.414 0.336 0.75 0.75 0.75 0 0 0.001 0 0.001 0h-0zM23.379 22.322c-0.136-0.136-0.324-0.22-0.531-0.22-0.415 0-0.751 0.336-0.751 0.751 0 0.207 0.084 0.395 0.22 0.531l5.152 5.152c0.136 0.136 0.324 0.22 0.531 0.22 0.415 0 0.751-0.336 0.751-0.751 0-0.207-0.084-0.395-0.22-0.531v0zM8.621 9.678c0.135 0.131 0.319 0.212 0.523 0.212 0.414 0 0.75-0.336 0.75-0.75 0-0.203-0.081-0.388-0.212-0.523l0 0-5.151-5.152c-0.136-0.14-0.327-0.227-0.538-0.227-0.414 0-0.75 0.336-0.75 0.75 0 0.211 0.087 0.401 0.227 0.537l0 0zM16 24.934c-0.414 0-0.75 0.336-0.75 0.75v0 4.307c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-4.307c-0-0.414-0.336-0.75-0.75-0.75v0zM16 7.058c0.414-0 0.75-0.336 0.75-0.75v0-4.308c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 4.308c0 0.414 0.336 0.75 0.75 0.75v0zM29.996 15.25h-4.309c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h4.309c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM7.063 16c-0-0.414-0.336-0.75-0.75-0.75h-4.308c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h4.308c0.414-0 0.75-0.336 0.75-0.75v0zM8.621 22.322l-5.151 5.154c-0.131 0.135-0.212 0.319-0.212 0.523 0 0.414 0.336 0.75 0.75 0.75 0.203 0 0.388-0.081 0.523-0.212l-0 0 5.151-5.154c0.14-0.136 0.227-0.327 0.227-0.538 0-0.414-0.336-0.75-0.75-0.75-0.211 0-0.401 0.087-0.538 0.227l-0 0zM20.4 24.664c-0.116-0.273-0.382-0.46-0.692-0.46-0.414 0-0.75 0.336-0.75 0.75 0 0.102 0.021 0.2 0.058 0.289l-0.002-0.005 0.436 1.049c0.116 0.274 0.383 0.462 0.693 0.463h0c0 0 0.001 0 0.001 0 0.414 0 0.749-0.336 0.749-0.749 0-0.104-0.021-0.203-0.059-0.293l0.002 0.005zM11.601 7.337c0.116 0.273 0.382 0.461 0.692 0.461 0.414 0 0.75-0.336 0.75-0.75 0-0.103-0.021-0.201-0.058-0.29l0.002 0.005-0.436-1.050c-0.116-0.274-0.382-0.462-0.692-0.462-0.414 0-0.75 0.336-0.75 0.75 0 0.104 0.021 0.202 0.059 0.292l-0.002-0.005zM25.24 12.99l1.047-0.434c0.274-0.116 0.463-0.382 0.463-0.693 0-0.414-0.336-0.75-0.75-0.75-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002-1.047 0.434c-0.274 0.116-0.463 0.382-0.463 0.693 0 0.414 0.336 0.75 0.75 0.75 0 0 0 0 0 0h-0c0.104-0 0.202-0.021 0.292-0.059l-0.005 0.002zM6.765 19.018l-1.052 0.436c-0.272 0.117-0.46 0.382-0.46 0.692 0 0.414 0.336 0.75 0.75 0.75 0.102 0 0.2-0.020 0.288-0.057l-0.005 0.002 1.052-0.436c0.276-0.115 0.466-0.383 0.466-0.695 0-0.414-0.336-0.75-0.75-0.75-0.105 0-0.204 0.021-0.295 0.060l0.005-0.002zM24.664 20.4l1.049 0.436c0.084 0.036 0.182 0.057 0.285 0.057 0.001 0 0.002 0 0.002 0h-0c0 0 0 0 0 0 0.414 0 0.75-0.336 0.75-0.75 0-0.311-0.189-0.578-0.459-0.691l-0.005-0.002-1.049-0.436c-0.084-0.035-0.182-0.056-0.284-0.056-0.414 0-0.75 0.336-0.75 0.75 0 0.31 0.188 0.576 0.456 0.69l0.005 0.002zM7.337 11.601l-1.050-0.436c-0.085-0.036-0.184-0.057-0.287-0.057-0.414 0-0.75 0.336-0.75 0.75 0 0.31 0.189 0.577 0.458 0.691l0.005 0.002 1.050 0.436c0.084 0.036 0.182 0.056 0.285 0.056 0.414 0 0.75-0.336 0.75-0.75 0-0.31-0.188-0.575-0.456-0.69l-0.005-0.002zM19.424 7.745c0.085 0.036 0.184 0.056 0.287 0.057h0c0 0 0.001 0 0.001 0 0.31 0 0.577-0.189 0.69-0.458l0.002-0.005 0.436-1.052c0.036-0.085 0.057-0.184 0.057-0.287 0-0.414-0.336-0.75-0.75-0.75-0.311 0-0.578 0.189-0.692 0.458l-0.002 0.005-0.436 1.052c-0.036 0.085-0.057 0.183-0.057 0.287 0 0.311 0.189 0.578 0.458 0.692l0.005 0.002zM12.584 24.26c-0.085-0.036-0.184-0.057-0.287-0.057-0.311 0-0.578 0.189-0.692 0.458l-0.002 0.005-0.434 1.047c-0.036 0.085-0.057 0.184-0.057 0.287 0 0.414 0.336 0.75 0.75 0.75 0.311 0 0.578-0.189 0.691-0.458l0.002-0.005 0.434-1.047c0.036-0.085 0.057-0.183 0.057-0.287 0-0.311-0.189-0.578-0.458-0.692l-0.005-0.002z"></path>
+                            </svg>                      
+                    </label>
+                </li>
+            </ul>
+        </nav>
+        <div id="sidebar" class="hidden">
+            <nav id="sidebar-nav">
+                <div class="sidebar-logo">Ats</div>
+                <ul class="nav-item">
+                    <li>
+                        <a href="#profile">
+                            <i class='bx bx-home'></i>
+                            <span class="tooltip">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class='bx bx-info-circle' ></i>
+                            <span class="tooltip">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#experience">
+                            <i class='bx bx-briefcase' ></i>
+                            <span class="tooltip">Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class='bx bxs-contact'></i>
+                            <span class="tooltip">Contact</span>
+                        </a>
+                    </li>
                 </ul>
+            </nav>
+        </div>
+        <nav id="ham-nav">
+            <div class="logo">Aswints.in</div>
+            <div class="ham-menu">
+                <div class="ham-icon" onclick="togglemenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#profile" onclick="togglemenu()">Home</a></li>
+                    <li><a href="#about" onclick="togglemenu()">About</a></li>
+                    <li><a href="#experience" onclick="togglemenu()">Portfolio</a></li>
+                    <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+                </div>
             </div>
         </nav>
-        <p>Copyright &#169; 2024 Aswints. All Rights Reserved.</p>
-    </footer>
+
+        <section id="profile">
+            <div class="section-pic-cont">
+                <img src="./assets/portfoliobg.png" class="portrait-pic" alt="profilepic" />
+            </div>
+            <div class="section-text">
+                <p class="section-text-p1">Hi, I'm</p>
+                <h1 class="title">Aswin T Sunil</h1>
+                <div class="typewriter-text">
+                    <p class="section-text-p2">A <span></span></p>
+                </div>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/aswin.pdf')">View CV</button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Me</button>
+                </div>
+                <div id="socials-cont">
+                    <img 
+                        src="/assets/linkedin.png" id="linkedin_p" alt="linkedinprofile"
+                        class="icon" onclick="location.href='https://linkedin.com/in/aswin-t-sunil-573740274'"
+                        target="_blank"
+                    />
+                    <img 
+                        src="/assets/github.png" id="github_p" alt="githubprofile"
+                        class="icon" onclick="location.href='https://github.com/shadow-slave'"
+                        target="_blank"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <p class="section-text-p1">More About Me</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-cont">
+                <div class="section-pic-cont">
+                    <img src="./assets/aboutbg.png" alt="profilepic" class="about-pic">
+                </div>
+                <div class="about-details-cont">
+                    <div class="about-cont">
+                        <div class="details-cont">
+                            <img
+                            id="experience"  
+                            class="icon" 
+                            src="./assets/experience.png" 
+                            alt="experiencepic"
+                            />
+                            <h3>Experience</h3>
+                            <p>6 month +</p><p>Python FullStack Development</p>
+                        </div>
+                        <div class="details-cont">
+                            <img  
+                            id="education"
+                            class="icon" 
+                            src="./assets/education.png" 
+                            alt="experiencepic"
+                            />
+                            <h3>Education</h3>
+                            <p>BCA Bachelors Degree</p>
+                        </div>
+                    </div>
+                    <div class="text-cont">
+                        <p>I'm Full Stack Developer, With a strong foundation in programming
+                            and a Bachelor's Degree in Computer Applications,I have a deep interest in creating seamless user experiences 
+                            and robust backend systems. Whether it's building responsive front-end designs or architecting efficient backend solutions,
+                            I am committed to delivering high-quality work that meets the needs of users and businesses alike.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/arrow.png" alt="arrowicon" class="icon arrow" onclick="location.href='./#experience'">
+        </section>
+        <section id="experience">
+            <p class="section-text-p1">Explore My</p>
+            <h1 class="title">Experience</h1>
+            <div class="experience-details-cont">
+                <div class="about-cont">
+                    <div class="details-cont">
+                        <h2 class="experience-sub-title">Frontend Development</h2>
+                        <div class="article-cont">
+                            <article>
+                                <img id="html" src="./assets/html.png" alt="HTML icon" class="icon">
+                                <h3>HTML</h3>
+                            </article>
+                            <article>
+                                <img id="css" src="./assets/css-3.png" alt="CSS icon" class="icon">
+                                <h3>CSS</h3>
+                            </article>
+                            <article>
+                                <img id="js" src="./assets/java-script.png" alt="JavaScript icon" class="icon">
+                                <h3>JavaScript</h3>
+                            </article>
+                            <article>
+                                <img id="ts" src="./assets/typescript.png" alt="TypeScript icon" class="icon">
+                                <h3>TypeScript</h3>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="details-cont">
+                        <h2 class="experience-sub-title">Backend Development</h2>
+                        <div class="article-cont">
+                            <article>
+                                <img id="django" src="./assets/django.png" alt="Django icon" class="icon">
+                                <h3>Django</h3>
+                            </article>
+                            <article>
+                                <img id="python" src="./assets/python.png" alt="Python icon" class="icon">
+                                <h3>Python</h3>
+                            </article>
+                            <article>
+                                <img id="mysql" src="./assets/mysql.png" alt="MySQL icon" class="icon">
+                                <h3>MySQL</h3>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+        </section>
+        <section id="projects">
+            <p class="section-text-p1">Browse My Recent</p>
+            <h1 class="title">Projects</h1>
+            <div class="experience-details-cont">
+                <div class="about-cont">
+                <div class="details-cont color-cont">
+                    <div class="article-cont">
+                        <img src="./assets/eturf.png" alt="project-1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Eturf</h2>
+                    <div class="btn-container">
+                        <a href="https://github.com/shadow-slave/Eturf" target="_blank"><button class="btn btn-color-2 project-btn-1" >
+                            Github
+                        </button></a>
+                        <a href="https://aswin001.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
+                            Live
+                        </button></a>
+                    </div>
+                </div>
+                <div class="details-cont color-cont">
+                    <div class="article-cont">
+                        <img src="./assets/pdmockmac.png" alt="project-2" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">Phoenix Designs</h2>
+                    <div class="btn-container">
+                        <a href="https://phoenixdesigns.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
+                            Github
+                        </button></a>
+                        <a href="https://phoenixdesigns.pythonanywhere.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
+                            Live
+                        </button></a>
+                    </div>
+                </div>
+                <div class="details-cont color-cont">
+                    <div class="article-cont">
+                        <img src="./assets/taskmanager.png" alt="project-3" class="project-img" >
+                    </div>
+                    <h2 class="experience-sub-title project-title">Task Manager</h2>
+                    <div class="btn-container">
+                        <a href="https://github.com/shadow-slave/todolist.git" target="_blank"><button class="btn btn-color-2 project-btn-1" onclick="location.href='https://github.com/" target="_blank">
+                            Github
+                        </button></a>
+                        <a href="https://todolist-k99z.onrender.com/" target="_blank"><button class="btn btn-color-2 project-btn" >
+                            Live
+                        </button></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+        </section>
+        <section id="contact">
+            <p class="section-text-p1">Get in Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-cont">
+                <div class="contact-info-cont">
+                    <img src="./assets/email.png" id="email" alt="email icon" class="icon contact-icon email-icon ">
+                    <p><a href="mailto:ashwinsunil02@gmail.com">ashwinsunil02@gmail.com</a></p>
+                </div>
+                <div class="contact-info-cont">
+                    <img src="./assets/linkedin.png" id="linkedin_f" alt="linkedin icon" class="icon contact-icon" target="_blank">
+                    <p><a href="https://linkedin.com/in/aswin-t-sunil-573740274" target="_blank">Linkedin</a></p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <nav>
+                <div class="nav-links-cont">
+                    <ul class="nav-links">
+                        <li><a href="#profile">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>Copyright &#169; 2024 Aswints. All Rights Reserved.</p>
+        </footer>
+    </div>
     <script src="/script.js"></script>
+    
 </body>
 </html>
