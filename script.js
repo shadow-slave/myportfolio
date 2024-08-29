@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded",function(){
+window.onload = function(){
     document.getElementById("preloader").style.display= "none";
     document.getElementById("main-content").classList.remove('main-content-hidden');
 
 }
-);
+;
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
