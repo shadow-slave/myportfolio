@@ -43,7 +43,7 @@
     --link-hover-color: #babfb6; /* Light gray for hovered links */
     --link-hover-textdecoration-color: #babfb6; /* Slightly darker for hovered underline */
     --hamIcon-spanBackground-color: #ffffff; /* White for hamburger menu icon */
-    --menu-links-bgColor: #333333; /* Dark background for menu links */
+    --menu-links-bgColor: #1e1e1e; /* Dark background for menu links */
     --menu-links-color: #ffffff; /* White text for menu links */
     --border-color: rgb(200, 200, 200); /* Light gray for borders */
     --btn-color-2-bg: var(--project-btn1-bg-color);
@@ -280,7 +280,7 @@ input:checked + label svg.moon{
 .ham-menu{
     position: relative;
     display: inline-block;
-
+    
 }
 
 .ham-icon{
@@ -297,6 +297,7 @@ input:checked + label svg.moon{
     height: 2px;
     background-color: var(--hamIcon-spanBackground-color);      /* background-color: #000; */
     transition: all 0.3 ease-in-out;
+    z-index: 999999;
 }
 
 .menu-links{
@@ -308,6 +309,10 @@ input:checked + label svg.moon{
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
+    border-radius: .625rem;
+    box-shadow: 10px 4px 20px rgba(255, 255, 255, 0.045), 0 1px 3px rgba(0, 0, 0, 0.3); /* Light and subtle shadow */
+    transform: translateX(100px);
+    
 }
 
 .menu-links a{
@@ -326,8 +331,19 @@ input:checked + label svg.moon{
 
 .menu-links.open {
     max-height: 300px;
-}
+    top: 5px;
+    padding: 10px 10px 20px 10px;
+    animation: fade-in .5s ease forwards ;
 
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;transform: translateX(50px);
+    }
+    to {
+        opacity: 1;transform: translateX(0); scale: 1 1;
+    }
+}
 .ham-icon.open span:first-child{
     transform: rotate(45deg) translate(10px,5px);
 }
@@ -863,8 +879,8 @@ footer p {
 }
 
 @media screen and (max-height:680px) {
-    #profile {
-        margin-bottom: 30rem;
+    #about {
+        margin-top: 10rem;
     }
 }
 
@@ -875,6 +891,7 @@ footer p {
     }
     #ham-nav{
         display: flex;
+        
     }
     #experience, .experience-details-cont {
         margin-top: 2rem;
@@ -905,6 +922,82 @@ footer p {
         flex-wrap: wrap;
         margin-top: 0;
     }
+    
+    /* darkmode toggle */
+
+    .darkmode-ham{
+        
+        width: 50px;
+        height: 25px;
+        position: relative;
+        display: block;
+        background: #ebebeb;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgb(0,0,0,0.4), inset 0px -5px 15px rgb(255,255,255,0.4);
+        cursor: pointer;
+        transition: 0.3s;
+        margin-bottom: 10px;
+    }
+
+    .darkmode-ham:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 5.7px;
+        left: 8px;
+        background: linear-gradient(180deg,#ffcc89,#dd880b);
+        border-radius: 180px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        transition: 0.3s;
+
+    }
+    .darkmode-ham:active:after {
+        width: 10px;
+    }
+
+    #darkmode-toggle-ham {
+        width: 0;
+        height: 0;
+    }
+
+    .menu-links li input:checked + label {
+        background: #242424;
+    }
+    .menu-links li input:checked + label:after {
+        left: 45px;
+        transform: translateX(-100%);
+        background: linear-gradient(180deg,#777,#3a3a3a);
+    }
+
+    .menu-links li label:active:after {
+        width: 40px;
+    }
+
+    .menu-links li label svg {
+        position: absolute;
+        width: 9px;
+        top: 1.5px;
+        z-index: 100;
+    }
+
+    .menu-links li label svg.sun {
+        left: 11px;
+        fill: #fff;
+        transition: 0.3s;
+    }
+    .menu-links li label svg.moon {
+        left: 33px;
+        fill: #7e7e7e;
+        transition: 0.3s;
+    }
+    .menu-links li input:checked + label svg.sun{
+        fill: #7e7e7e;
+    }
+    .menu-links li input:checked + label svg.moon{
+        fill: #fff;
+    }
+
 }
 
 @media screen and (max-width: 600px) {

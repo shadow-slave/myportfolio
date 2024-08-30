@@ -24,62 +24,35 @@ function togglemenu() {
 
 // SIDEBAR 
 
-// window.onscroll = function() {toggleSidebar()};
+window.addEventListener('scroll', toggleSidebar);
+window.addEventListener('resize', toggleSidebar);
 
-// function toggleSidebar() {
-//     var desktopNav = document.getElementById("desktop-nav");
-//     var sidebar = document.getElementById("sidebar");
-//     if (window.innerWidth >= 1200 ){
-//         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-//             desktopNav.classList.add("hidden");
-//             sidebar.classList.remove("hidden");
-//             sidebar.classList.add("open");
-//         } else {
-//             desktopNav.classList.remove("hidden");
-//             sidebar.classList.remove("open");
-//         }
-//     }
-// 
-// SIDEBAR 
-
-window.addEventListener('scroll', debounce(toggleSidebar, 50));
-
+// Toggle Sidebar based on scroll position
 function toggleSidebar() {
-    var desktopNav = document.getElementById("desktop-nav");
-    var sidebar = document.getElementById("sidebar");
+    const desktopNav = document.getElementById("desktop-nav");
+    const sidebar = document.getElementById("sidebar");
 
     // Ensure elements exist
     if (!desktopNav || !sidebar) return;
 
     // Only run if screen width is 1200px or greater
     if (window.innerWidth >= 1200) {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        const scrolledPastThreshold = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
+        
+        if (scrolledPastThreshold) {
             desktopNav.classList.add("hidden");
             sidebar.classList.remove("hidden");
             sidebar.classList.add("open");
         } else {
             desktopNav.classList.remove("hidden");
             sidebar.classList.remove("open");
+            sidebar.classList.add("hidden");
         }
-    } 
-}
-
-// Debounce function to improve performance during scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function() {
-        const context = this, args = arguments;
-        const later = function() {
-            timeout = null;
-            func.apply(context, args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
+    } else {
+        sidebar.classList.remove("open");
+        sidebar.classList.add("hidden");
+    }
 }
 
 // Initial check to set up the correct state
 toggleSidebar();
-
-// Handle window resize
-window.addEventListener('resize', toggleSidebar);
