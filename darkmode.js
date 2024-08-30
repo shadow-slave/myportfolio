@@ -50,6 +50,8 @@ const disableDarkmode = () => {
     dark_dj.src = './assets/django.png'
     dark_py.src = './assets/python.png'
     dark_sql.src = './assets/mysql.png'
+    dark_email.src='./assets/email.png'
+    dark_footer_linkedin.src = './assets/linkedin.png'
     for ( i=0 ; i< dark_arrow.length ; i++) {
         dark_arrow[i].src = './assets/arrow.png';
     }
