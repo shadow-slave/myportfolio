@@ -1,6 +1,7 @@
 let darkmode = localStorage.getItem('darkmode')
 let checkbox = localStorage.getItem('checkbox')
 const themeSwitch = document.getElementById('darkmode-toggle')
+const themeSwitch_ham = document.getElementById('darkmode-toggle-ham')
 const dark_html = document.getElementById('html')
 const dark_linkedin = document.getElementById('linkedin_p')
 const dark_footer_linkedin = document.getElementById('linkedin_f')
@@ -63,10 +64,16 @@ if(darkmode === "active") enableDarkmode()
 
 if(checkbox === 'true') {
     themeSwitch.checked = true ;
-    
+    themeSwitch_ham.checked = true ;
 }
 
 themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    localStorage.setItem('checkbox',themeSwitch.checked)
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
+
+themeSwitch_ham.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode')
     localStorage.setItem('checkbox',themeSwitch.checked)
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
