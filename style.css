@@ -572,6 +572,7 @@ section {
 .about-cont,
 .about-details-cont{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .about-pic {
