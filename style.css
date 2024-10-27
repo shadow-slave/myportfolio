@@ -121,8 +121,8 @@ html{
     content: "Loading...\A Cargando...\A Chargement...\A Laden...\A Caricamento...\A 素早く...\A Préchargement...\A Loading"; 
     white-space: pre;
     display: inline-block;
-    animation: l39 3s infinite steps(8) alternate;
-  }
+    animation: l39 2s infinite steps(8) alternate;
+}
   
   @keyframes l39 {
     100% { transform: translateY(-100%); }
