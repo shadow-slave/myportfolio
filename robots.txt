@@ -1,0 +1,6 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Disallow:
+
+# Sitemap location (recommended for SEO)
+Sitemap: https://aswints.pages.dev/sitemap.xml
