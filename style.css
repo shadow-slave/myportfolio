@@ -370,8 +370,8 @@ input:checked+label svg.moon {
 .menu-links.open {
 	max-height: 300px;
 	top: 5px;
-	padding: 10px 10px 20px;
-	animation: .5s forwards fade-in
+	padding: 10px 10px 40px;
+	animation: .5s forwards fade-in;
 }
 
 @keyframes fade-in {
@@ -921,7 +921,10 @@ footer {
 	}
 
 	#ham-nav {
-		display: flex
+		display: flex;
+		position: sticky ;
+		top: 0;
+		z-index: 999;
 	}
 
 	#profile,
