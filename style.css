@@ -571,7 +571,7 @@ section {
 .timeline {
 	width: 80%;
 	height: auto;
-	max-width: 800px;
+	/* max-width: 800px; */
 	margin: 2rem auto;
 	display: flex;
 	flex-direction: column
@@ -589,6 +589,10 @@ section {
 
 .timeline-component {
 	margin: 0 20px 20px
+}
+.timeline-left{
+	grid-row: 1;
+	
 }
 
 @media screen and (min-width:768px) {

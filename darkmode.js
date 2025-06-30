@@ -78,3 +78,4 @@ themeSwitch_ham.addEventListener("click", () => {
     localStorage.setItem('checkbox',themeSwitch_ham.checked)
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
+
